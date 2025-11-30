@@ -1,13 +1,40 @@
+---
+// Styles
+import "@/styles/global.css";
+// Data
+import { siteData } from "@/data/global";
+// Components
+import Head from "@/components/Head.astro";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+import SEO from "@/components/SEO.astro";
+// Props
+const { pageTitle, pageDescription, currentURL, ogType, ogImage, ogImageAlt, articleAuthor, datePublished, dateModified } = Astro.props;
+---
 <!doctype html>
-<html lang="en">
+<html lang={siteData.lang}>
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<Head />
+		<SEO
+		pageTitle={pageTitle}
+		pageDescription={pageDescription}
+		currentURL={currentURL}
+		ogType={ogType}
+		ogImage={ogImage}
+		ogImageAlt={ogImageAlt}
+		articleAuthor={articleAuthor}
+		datePublished={datePublished}
+		dateModified={dateModified} />
+		<slot name="head" />
+		<title>{siteData.name}</title>
 	</head>
-	<body>
+	<body class="flex flex-col bg-neutral-50 dark:bg-neutral-950 min-h-screen">
+		<Header />
 		<slot />
+		<Footer />
 	</body>
 </html>

@@ -1,1 +1,94 @@
 @import "tailwindcss";
+@plugin '@tailwindcss/typography';
+@theme {
+    --font-heading: "Satoshi", "sans-serif";
+    --font-body: "Satoshi", "sans-serif";
+    
+    --text-fluid-xs: clamp(0.7813rem, 0.7679rem + 0.0335vw, 0.8rem);
+    --text-fluid-sm: clamp(0.9375rem, 0.8929rem + 0.1116vw, 1rem);
+    --text-fluid-base: clamp(1.125rem, 1.0357rem + 0.2232vw, 1.25rem);
+    --text-fluid-lg: clamp(1.35rem, 1.1982rem + 0.3795vw, 1.5625rem);
+    --text-fluid-xl: clamp(1.62rem, 1.3821rem + 0.5949vw, 1.9531rem);
+    --text-fluid-2xl: clamp(1.944rem, 1.5887rem + 0.8882vw, 2.4414rem);
+    --text-fluid-3xl: clamp(2.3328rem, 1.8193rem + 1.2839vw, 3.0518rem);
+    --text-fluid-4xl: clamp(2.7994rem, 2.0741rem + 1.8131vw, 3.8147rem);
+
+    --spacing-fluid-2xs: clamp(0.5625rem, 0.5179rem + 0.1116vw, 0.625rem);
+    --spacing-fluid-xs: clamp(0.875rem, 0.8304rem + 0.1116vw, 0.9375rem);
+    --spacing-fluid-sm: clamp(1.125rem, 1.0357rem + 0.2232vw, 1.25rem);
+    --spacing-fluid-base: clamp(1.6875rem, 1.5536rem + 0.3348vw, 1.875rem);
+    --spacing-fluid-lg: clamp(2.25rem, 2.0714rem + 0.4464vw, 2.5rem);
+    --spacing-fluid-xl: clamp(3.375rem, 3.1071rem + 0.6696vw, 3.75rem);
+    --spacing-fluid-2xl: clamp(4.5rem, 4.1429rem + 0.8929vw, 5rem);
+    --spacing-fluid-3xl: clamp(5.625rem, 5.1786rem + 1.1161vw, 6.25rem);
+    --spacing-fluid-4xl: clamp(6.75rem, 6.2143rem + 1.3393vw, 7.5rem);
+}
+
+@layer base {
+    h1 {
+        font-size: var(--text-fluid-4xl);
+    }
+    h2 {
+        font-size: var(--text-fluid-3xl);
+    }
+    h3 {
+        font-size: var(--text-fluid-2xl);
+    }
+    h4 {
+        font-size: var(--text-fluid-xl);
+    }
+    h5 {
+        font-size: var(--text-fluid-lg);
+    }
+    h6 {
+        font-size: var(--text-fluid-base);
+    }
+    h1, h2, h3, h4, h5, h6 {
+        font-family: var(--font-heading);
+        font-weight: var(--font-weight-semibold);
+        color: var(--color-neutral-950);
+        font-weight: 600;
+
+        @variant dark {
+            color: var(--color-neutral-50);
+        }
+    }
+    body {
+        font-family: var(--font-body);
+        font-weight: var(--font-weight-normal);
+        font-size: var(--text-fluid-base);
+        color: var(--color-neutral-800);
+
+        @variant dark {
+            color: var(--color-neutral-200);
+        }
+    }
+    a:hover {
+        color: var(--color-neutral-950);
+
+        @variant dark {
+            color: var(--color-neutral-50);
+        }
+    }
+}
+
+/* Satoshi Font */
+@font-face {
+	font-family: 'Satoshi';
+	src:  url('/fonts/Satoshi-Variable.woff2') format('woff2'),
+        url('/fonts/Satoshi-Variable.woff') format('woff'),
+        url('/fonts/Satoshi-Variable.ttf') format('truetype');
+    font-weight: 300 900;
+    font-style: normal;
+    font-display: swap;
+}
+/* Satoshi Font Italic */
+@font-face {
+	font-family: 'Satoshi';
+	src:  url('/fonts/Satoshi-VariableItalic.woff2') format('woff2'),
+        url('/fonts/Satoshi-VariableItalic.woff') format('woff'),
+        url('/fonts/Satoshi-VariableItalic.ttf') format('truetype');
+    font-weight: 300 900;
+    font-style: italic;
+    font-display: swap;
+}

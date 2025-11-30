@@ -1,6 +1,36 @@
 ---
+// Components
 import Layout from "@/layouts/Layout.astro";
+import Polaroid from "@/components/Polaroid.astro";
+// Data
+import { siteData } from "@/data/global";
+// Current URL
+const currentURL = Astro.url.href;
 ---
-<Layout>
-	Home
+<Layout 
+	pageTitle={`${siteData.name} | Home`}
+	pageDescription="Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque blanditiis modi architecto ipsum. Distinctio, ipsam quis."
+	currentURL={currentURL}
+	ogImage="https://images.unsplash.com/photo-1677242178360-6518e2a87194?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+	ogImageAlt="Og Image Description"
+	articleAuthor={siteData.author}
+>
+<section class="gap-fluid-base columns-1 md:columns-2 lg:columns-3 xl:columns-4 mx-auto mt-fluid-base [&_*:not(:first-child)]:mt-fluid-base px-fluid-sm container">
+	<Polaroid src="https://images.unsplash.com/photo-1495298599282-d8920eb5009b?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+	<Polaroid src="https://images.unsplash.com/photo-1609831190577-04538764f438?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+	<Polaroid src="https://images.unsplash.com/photo-1626879210826-c953d2dfa15f?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+	<Polaroid src="https://images.unsplash.com/photo-1598911597964-54ca054a7001?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+	<Polaroid src="https://images.unsplash.com/photo-1565292334631-95d1dd9e2970?q=80&w=730&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+	<Polaroid src="https://images.unsplash.com/photo-1709542441763-3aefb0dae757?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+	<Polaroid src="https://images.unsplash.com/photo-1732708872490-a1ff3a917047?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+	<Polaroid src="https://images.unsplash.com/photo-1732708871311-7405ee2f2b1a?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+	<Polaroid src="https://images.unsplash.com/photo-1495298599282-d8920eb5009b?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+	<Polaroid src="https://images.unsplash.com/photo-1609831190577-04538764f438?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+	<Polaroid src="https://images.unsplash.com/photo-1626879210826-c953d2dfa15f?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+	<Polaroid src="https://images.unsplash.com/photo-1598911597964-54ca054a7001?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+	<Polaroid src="https://images.unsplash.com/photo-1565292334631-95d1dd9e2970?q=80&w=730&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+	<Polaroid src="https://images.unsplash.com/photo-1709542441763-3aefb0dae757?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+	<Polaroid src="https://images.unsplash.com/photo-1732708872490-a1ff3a917047?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+	<Polaroid src="https://images.unsplash.com/photo-1732708871311-7405ee2f2b1a?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+</section>
 </Layout>
