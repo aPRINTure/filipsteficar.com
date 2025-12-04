@@ -2,11 +2,43 @@
 // Components
 import { Image } from 'astro:assets';
 // Props
-const { src="https://images.unsplash.com/photo-1763742497687-e2d8be3a5233?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", alt="Alt Description", width="800", height="1200" } = Astro.props;
+const {
+    src,
+    srcLightbox,
+    alt="Alt Description",
+    width,
+    height,
+    loading="eager",
+} = Astro.props;
+// Lightbox CSS
+import "glightbox/dist/css/glightbox.css";
 ---
-<div class="flex flex-col items-start bg-zinc-100 dark:bg-zinc-900 [&_*:not(:first-child)]:mt-fluid-xs p-fluid-xs">
-    <a href={src}>
-        <Image src={src} class="bg-zinc-50 grayscale hover:grayscale-0 transition-all duration-500 ease-in-out hover:" alt={alt} width={width} height={height} />
+<div class="bg-zinc-100 dark:bg-zinc-900 p-fluid-sm glightbox">
+    <a  class="glightbox"
+        href={srcLightbox}
+        data-type="image"
+        data-srcset={srcLightbox}
+        data-glightbox
+        data-gallery="gallery"
+    >
+        <Image
+        class="bg-zinc-50 grayscale hover:grayscale-0 transition-all duration-500 ease-in-out"
+        src={src}
+        alt={alt}
+        width={width}
+        height={height}
+        loading={loading}
+        />
     </a>
-    <p class="text-fluid-sm">Lorem ipsum dolor sit amet consectetur.</p>
+    <p class="mt-fluid-sm text-fluid-sm">{width}w and {height}h</p>
 </div>
+
+<script>
+    import GLightbox from 'glightbox';
+    
+    const lightbox = GLightbox({
+        selector: '[data-glightbox]',
+        touchNavigation: true,
+        loop: true
+    });
+</script>

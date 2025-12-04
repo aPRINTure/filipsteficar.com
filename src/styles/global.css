@@ -1,8 +1,8 @@
 @import "tailwindcss";
 @plugin '@tailwindcss/typography';
 @theme {
-    --font-heading: "Satoshi", "sans-serif";
-    --font-body: "Satoshi", "sans-serif";
+    --font-heading: "Instrument Serif", system-ui, sans-serif;
+    --font-body: "Outfit", system-ui, sans-serif;
     
     --text-fluid-xs: clamp(0.7813rem, 0.7679rem + 0.0335vw, 0.8rem);
     --text-fluid-sm: clamp(0.9375rem, 0.8929rem + 0.1116vw, 1rem);
@@ -72,23 +72,33 @@
     }
 }
 
-/* Satoshi Font */
+/* Outfit */
 @font-face {
-	font-family: 'Satoshi';
-	src:  url('/fonts/Satoshi-Variable.woff2') format('woff2'),
-        url('/fonts/Satoshi-Variable.woff') format('woff'),
-        url('/fonts/Satoshi-Variable.ttf') format('truetype');
-    font-weight: 300 900;
+	font-family: 'Outfit';
+	src:  url('/fonts/Outfit-Variable.woff2') format('woff2'),
+        url('/fonts/Outfit-Variable.woff') format('woff'),
+        url('/fonts/Outfit-Variable.ttf') format('truetype');
+    font-weight: 100 900;
     font-style: normal;
     font-display: swap;
 }
-/* Satoshi Font Italic */
+/* Instrument Serif */
 @font-face {
-	font-family: 'Satoshi';
-	src:  url('/fonts/Satoshi-VariableItalic.woff2') format('woff2'),
-        url('/fonts/Satoshi-VariableItalic.woff') format('woff'),
-        url('/fonts/Satoshi-VariableItalic.ttf') format('truetype');
-    font-weight: 300 900;
+	font-family: 'Instrument Serif';
+	src:  url('/fonts/InstrumentSerif-Regular.woff2') format('woff2'),
+        url('/fonts/InstrumentSerif-Regular.woff') format('woff'),
+        url('/fonts/InstrumentSerif-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+/* Instrument Serif Italic */
+@font-face {
+	font-family: 'Instrument Serif';
+	src:  url('/fonts/InstrumentSerif-Italic.woff2') format('woff2'),
+        url('/fonts/InstrumentSerif-Italic.woff') format('woff'),
+        url('/fonts/InstrumentSerif-Italic.ttf') format('truetype');
+    font-weight: 400;
     font-style: italic;
     font-display: swap;
 }
