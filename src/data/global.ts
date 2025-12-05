@@ -92,6 +92,14 @@ export const myToolbox: Toolbox[] = [
     {
         label: "Affinity",
         href: "/",
+    },
+    {
+        label: "Bricks Builder",
+        href: "/",
+    },
+    {
+        label: "Tailwind CSS",
+        href: "/",
     }
 ]
 // Define the SeenOn Interface

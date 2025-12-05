@@ -3,19 +3,11 @@
 import Layout from "@/layouts/Layout.astro";
 import Polaroid from "@/components/Polaroid.astro";
 import { siteData } from "@/data/global";
-
 // Current URL
 const currentURL = Astro.url.href;
-// Unsplash API
-const accessKey = import.meta.env.PUBLIC_UNSPLASH_ACCESS_KEY;
-
-const response = await fetch(
-    `https://api.unsplash.com/users/filipsteficar/photos?client_id=${accessKey}&per_page=40&stats=true`
-);
-
+// Call Unsplash API Route
+const response = await fetch(`${Astro.url.origin}/api/unsplash`);
 const photos = await response.json();
-// console.log(photos);
-
 // Sort By Total Views Descending
 photos.sort((a: UnsplashPhoto, b: UnsplashPhoto) => {
     const viewsA = a.statistics?.views?.total ?? 0;
@@ -23,29 +15,7 @@ photos.sort((a: UnsplashPhoto, b: UnsplashPhoto) => {
     return viewsB - viewsA;
 });
 // Unsplash Interface
-interface UnsplashPhoto {
-    statistics?: {
-        views: {
-            total: number;
-        }
-    }
-    urls: {
-        small: string;
-        regular: string;
-        full: string;
-        raw: string; 
-    };
-    user: {
-        name: string;
-    }
-    links: {
-        html: string;
-        self: string;
-    }
-    views: number;
-    width: number;
-    height: number;
-}
+import type { UnsplashPhoto } from "@/types/unsplash";
 ---
 <Layout 
   pageTitle={`${siteData.name} | Home`}
