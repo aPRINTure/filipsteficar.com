@@ -1,0 +1,13 @@
+---
+// ContactForm + n8n Webhook
+const webhookUrl = "https://your-n8n-instance.com/webhook/contact-form";
+---
+<form action={webhookUrl} method="POST" class="flex flex-col gap-fluid-sm mt-fluid-sm">
+    <input class="bg-zinc-100 dark:bg-zinc-900 px-fluid-sm py-fluid-2xs rounded-2xl" type="text" id="name" name="name" placeholder="Your Name" required />
+
+    <input class="bg-zinc-100 dark:bg-zinc-900 px-fluid-sm py-fluid-2xs rounded-2xl" type="email" id="email" name="email" placeholder="Your E-Mail" required />
+
+    <textarea class="bg-zinc-100 dark:bg-zinc-900 px-fluid-sm py-fluid-2xs rounded-2xl" id="message" name="message" minlength="30" placeholder="Your Message" rows="6" required></textarea>
+
+    <button class="bg-zinc-100 hover:bg-zinc-200 hover:dark:bg-zinc-800 dark:bg-zinc-900 px-fluid-sm py-fluid-2xs rounded-full transition-colors duration-500 ease-in-out" type="submit">Send</button>
+</form>

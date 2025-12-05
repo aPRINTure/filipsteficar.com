@@ -12,7 +12,7 @@ import SEO from "@/components/SEO.astro";
 const { pageTitle, pageDescription, currentURL, ogType, ogImage, ogImageAlt, articleAuthor, datePublished, dateModified } = Astro.props;
 ---
 <!doctype html>
-<html lang={siteData.lang}>
+<html lang={siteData.lang} class="scroll-smooth">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
@@ -32,7 +32,7 @@ const { pageTitle, pageDescription, currentURL, ogType, ogImage, ogImageAlt, art
 		<slot name="head" />
 		<title>{siteData.name}</title>
 	</head>
-	<body class="flex flex-col bg-neutral-50 dark:bg-neutral-950 min-h-screen">
+	<body class="flex flex-col bg-zinc-50 dark:bg-zinc-950 min-h-screen">
 		<Header />
 		<slot />
 		<Footer />

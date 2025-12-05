@@ -10,20 +10,39 @@ const currentURL = Astro.url.href;
 const accessKey = import.meta.env.PUBLIC_UNSPLASH_ACCESS_KEY;
 
 const response = await fetch(
-    `https://api.unsplash.com/users/filipsteficar/photos?client_id=${accessKey}&per_page=40`
+    `https://api.unsplash.com/users/filipsteficar/photos?client_id=${accessKey}&per_page=40&stats=true`
 );
 
 const photos = await response.json();
-console.log(photos);
+// console.log(photos);
+
+// Sort By Total Views Descending
+photos.sort((a: UnsplashPhoto, b: UnsplashPhoto) => {
+    const viewsA = a.statistics?.views?.total ?? 0;
+    const viewsB = b.statistics?.views?.total ?? 0;
+    return viewsB - viewsA;
+});
 // Unsplash Interface
 interface UnsplashPhoto {
+    statistics?: {
+        views: {
+            total: number;
+        }
+    }
     urls: {
         small: string;
         regular: string;
         full: string;
         raw: string; 
     };
-    location: string;
+    user: {
+        name: string;
+    }
+    links: {
+        html: string;
+        self: string;
+    }
+    views: number;
     width: number;
     height: number;
 }
@@ -42,12 +61,14 @@ interface UnsplashPhoto {
             <Polaroid
             src={photo.urls.small}
             srcLightbox={photo.urls.regular}
-            alt={photo.location}
             width={photo.width}
             height={photo.height}
+            views={photo.statistics?.views?.total}
+            author={photo.user.name}
+            authorUnsplashLink={photo.links.html}
+            loading="lazy"
             />
         </div>
     ))}
 </section>
-
 </Layout>

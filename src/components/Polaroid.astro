@@ -9,6 +9,9 @@ const {
     width,
     height,
     loading="eager",
+    views,
+    author,
+    authorUnsplashLink,
 } = Astro.props;
 // Lightbox CSS
 import "glightbox/dist/css/glightbox.css";
@@ -22,7 +25,7 @@ import "glightbox/dist/css/glightbox.css";
         data-gallery="gallery"
     >
         <Image
-        class="bg-zinc-50 grayscale hover:grayscale-0 transition-all duration-500 ease-in-out"
+        class="bg-zinc-50 hover:rounded-b-2xl transition-all hover:-translate-y-fluid-sm duration-500 ease-in-out"
         src={src}
         alt={alt}
         width={width}
@@ -30,7 +33,9 @@ import "glightbox/dist/css/glightbox.css";
         loading={loading}
         />
     </a>
-    <p class="mt-fluid-sm text-fluid-sm">{width}w and {height}h</p>
+    <p class="flex flex-row flex-wrap justify-between gap-fluid-sm mt-fluid-sm font-heading text-fluid-base">Views: {views}
+        <a href={`${authorUnsplashLink}?utm_source=filipsteficar.com&utm_medium=referral`} target="_blank" rel="noopener noreferrer">{author} on Unsplash</a>
+    </p>
 </div>
 
 <script>
