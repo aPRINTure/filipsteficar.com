@@ -5,13 +5,9 @@ import { Image } from 'astro:assets';
 const {
     src,
     srcLightbox,
-    alt="Alt Description",
-    width,
-    height,
-    loading="eager",
-    views,
-    author,
-    authorUnsplashLink,
+    alt,
+    loading,
+    quote
 } = Astro.props;
 // Lightbox CSS
 import "glightbox/dist/css/glightbox.css";
@@ -28,14 +24,11 @@ import "glightbox/dist/css/glightbox.css";
         class="hover:rounded-b-2xl transition-all hover:-translate-y-fluid-sm duration-500 ease-in-out"
         src={src}
         alt={alt}
-        width={width}
-        height={height}
+        inferSize={true}
         loading={loading}
         />
     </a>
-    <p class="flex flex-row flex-wrap justify-between gap-fluid-sm mt-fluid-sm font-heading text-fluid-base">Views: {views}
-        <a href={`${authorUnsplashLink}?utm_source=filipsteficar.com&utm_medium=referral`} target="_blank" rel="noopener noreferrer">{author} on Unsplash</a>
-    </p>
+    <p class="flex flex-row flex-wrap justify-between gap-fluid-sm mt-fluid-sm font-heading text-fluid-base">{quote}</p>
 </div>
 
 <script>

@@ -17,7 +17,8 @@ const currentURL = Astro.url.href;
 <section class="mx-auto px-fluid-sm container">
     <div class="flex flex-col justify-center items-center gap-fluid-sm h-screen text-center">
         <p>{currentURL}</p>
-        <h1 class="max-w-2xl">This page ran away. Maybe it heard I <span class="italic">shoot</span> people.</h1>
+        <h1 class="max-w-2xl leading-none">This page ran away. Maybe it heard I <span class="italic">shoot*</span> people.</h1>
+		<p>*as a photographer!</p>
         <a href="/" class="bg-zinc-100 hover:bg-zinc-200 hover:dark:bg-zinc-800 dark:bg-zinc-900 px-fluid-sm py-fluid-2xs rounded-full transition-colors duration-500 ease-in-out">Take Me Home</a>
     </div>
 </section>

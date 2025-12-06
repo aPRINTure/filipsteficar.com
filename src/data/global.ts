@@ -66,40 +66,40 @@ interface Toolbox {
 // Toolbox
 export const myToolbox: Toolbox[] = [
     {
-        label: "Davinci Resolve",
-        href: "/"
+        label: "DaVinci Resolve",
+        href: "https://www.blackmagicdesign.com/products/davinciresolve"
     },
     {
         label: "FL Studio",
-        href: "/"
+        href: "https://www.image-line.com/"
     },
     {
         label: "WordPress",
-        href: "/",
+        href: "https://wordpress.org/",
     },
     {
         label: "Astro JS",
-        href: "/",
+        href: "https://astro.build/",
     },
     {
         label: "n8n",
-        href: "/",
+        href: "https://n8n.io/",
     },
     {
         label: "Darktable",
-        href: "/",
+        href: "https://www.darktable.org/",
     },
     {
         label: "Affinity",
-        href: "/",
+        href: "https://www.affinity.studio/",
     },
     {
         label: "Bricks Builder",
-        href: "/",
+        href: "https://bricksbuilder.io/",
     },
     {
         label: "Tailwind CSS",
-        href: "/",
+        href: "https://tailwindcss.com/",
     }
 ]
 // Define the SeenOn Interface
