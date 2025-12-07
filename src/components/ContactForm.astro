@@ -1,8 +1,9 @@
 ---
 // ContactForm + n8n Webhook
-const formAction = "https://n8n.nova.filipsteficar.com/webhook-test/67e8015a-c036-4236-8a4b-e55de37873fa";
+const formActionDev = "https://n8n.nova.filipsteficar.com/webhook-test/67e8015a-c036-4236-8a4b-e55de37873fa";
+const formActionProd = "https://n8n.nova.filipsteficar.com/webhook/67e8015a-c036-4236-8a4b-e55de37873fa";
 ---
-<form action={formAction} method="POST" class="flex flex-col gap-fluid-sm mt-fluid-sm">
+<form action={formActionProd} method="POST" class="flex flex-col gap-fluid-sm mt-fluid-sm">
     <div class="cf-turnstile" data-sitekey="0x4AAAAAACFPruQu0TCYhT0U"></div>
 
     <input class="bg-zinc-100 dark:bg-zinc-900 px-fluid-sm py-fluid-2xs rounded-2xl" type="text" id="name" name="name" placeholder="Your Name" required />
