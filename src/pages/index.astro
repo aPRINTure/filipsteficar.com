@@ -11,7 +11,7 @@ const currentURL = Astro.url.href;
 import type { PocketBasePhotos } from "@/types/pocketbase";
 // Call PocketBase API
 const response = await fetch(
-    'https://fscms.nova.filipsteficar.com/api/collections/photos/records?filter=(gallery="s55mvh7k6ku1vbq")'
+    'https://fscms.nova.filipsteficar.com/api/collections/photos/records?filter=(gallery="s55mvh7k6ku1vbq")&perPage=50&sort=order'
 );
 const data = await response.json();
 const photos: PocketBasePhotos[] = data.items;
@@ -33,7 +33,7 @@ const photos: PocketBasePhotos[] = data.items;
             <Polaroid
             src={`https://fscms.nova.filipsteficar.com/api/files/photos/${photo.id}/${photo.image}?thumb=0x100`}
             srcLightbox={`https://fscms.nova.filipsteficar.com/api/files/photos/${photo.id}/${photo.image}`}
-            alt={photo.alt_text}
+            alt={photo.alt_text || photo.quote}
             quote={photo.quote || "Quote Missing"}
             loading="lazy"
             />

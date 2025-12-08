@@ -13,7 +13,7 @@ const toolbox: PocketBaseToolbox[] = data.items;
 	<div class="flex flex-row flex-wrap gap-fluid-sm mt-fluid-sm">
 		{toolbox?.sort((a, b) => a.name.localeCompare(b.name)).map(tool => (
 		<div class="flex flex-col gap-fluid-sm">
-			<a href={tool.link + (tool.link.includes('?') ? '&' : '?') + "utm_source=filipsteficar.com&utm_medium=portfolio&utm_campaign=toolbox"} class="bg-zinc-100 dark:bg-zinc-900 p-fluid-sm border-2 border-zinc-200 hover:border-blue-500 dark:border-zinc-800 transition-all hover:-translate-y-1 duration-500 ease-in-out" target="_blank" rel="noopener noreferrer">{tool.name}</a>
+			<a href={tool.link + (tool.link.includes('?') ? '&' : '?') + "utm_source=filipsteficar.com&utm_medium=portfolio&utm_campaign=toolbox"} class="bg-zinc-100 dark:bg-zinc-900 p-fluid-sm border-2 border-zinc-200 hover:border-woodland-500 dark:border-zinc-800 transition-all hover:-translate-y-1 duration-500 ease-in-out" target="_blank" rel="noopener noreferrer">{tool.name}</a>
 		</div>
 		))}
 	</div>

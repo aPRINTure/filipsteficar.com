@@ -8,73 +8,70 @@ import Featured from "@/components/Featured.astro";
 import { siteData } from "@/data/global";
 // Current URL
 const currentURL = Astro.url.href;
-// Images
-import filipSteficarImage from "@/images/filip-steficar.jpg";
 ---
 <Layout 
 	pageTitle={`${siteData.name} | About Me`}
 	pageDescription="Photographer, creator, and entrepreneur who's always building something new."
 	currentURL={currentURL}
-	ogImage={filipSteficarImage}
+	ogImage="https://fscms.nova.filipsteficar.com/api/files/pbc_1063624087/4walsoye8oi54bs/filip_steficar_art_2_qxdla60upf.webp"
 	ogImageAlt="Portrait of Filip Štefičar"
 	articleAuthor={siteData.author}
 >
 <section class="mt-fluid-sm">
-	<div class="gap-fluid-sm grid grid-cols-1 lg:grid-cols-2 mx-auto px-fluid-sm container">
-		<div class="">
-			<h1 class="leading-none">Hi, I am Filip Štefičar</h1>
-			<p class="mt-fluid-sm">Photographer, creator, and entrepreneur who's always building something new.</p>
+	<div class="flex lg:flex-row flex-col gap-fluid-sm mx-auto px-fluid-sm container">
+		<div class="w-full lg:w-1/2">
+			<h1 class="leading-tight">Hi, I am Filip Štefičar. Error 404: Sanity Not Found!</h1>
+			<p class="mt-fluid-sm">Photographer, creator, and entrepreneur obsessed with making things. If I'm not building something new, that's when you should really worry.</p>
 			<div class="flex flex-col gap-fluid-sm mt-fluid-sm">
-				<h3>I am currently working on:</h3>
-				<div class="bg-zinc-100 dark:bg-zinc-900 p-fluid-sm border-2 border-zinc-200 hover:border-blue-500 dark:border-zinc-800 transition-all hover:-translate-y-1 duration-500 ease-in-out">
+				<h3>Currently working on:</h3>
+				<div class="bg-zinc-100 dark:bg-zinc-900 p-fluid-sm border-2 border-zinc-200 hover:border-woodland-500 dark:border-zinc-800 transition-all hover:-translate-y-1 duration-500 ease-in-out">
 					<h4>aPRINTure:</h4>
-					<p>My 3D printing brand, where creativity meets technology. I design and produce unique, high-quality 3D printed products for photographers.</p>
+					<p>My 3D printing brand for photographers. Success rate: questionable. Vibes: immaculate. We’re making custom lens adapters for vintage lenses because I keep losing mine and refuse to pay €40 every time gravity wins.</p>
 				</div>
-				<div class="bg-zinc-100 dark:bg-zinc-900 p-fluid-sm border-2 border-zinc-200 hover:border-blue-500 dark:border-zinc-800 transition-all hover:-translate-y-1 duration-500 ease-in-out">
+				<div class="bg-zinc-100 dark:bg-zinc-900 p-fluid-sm border-2 border-zinc-200 hover:border-woodland-500 dark:border-zinc-800 transition-all hover:-translate-y-1 duration-500 ease-in-out">
 					<h4>Fun&Grains:</h4>
-					<p>A vegan cooking brand by <a href="https://www.instagram.com/viktorija.j99/" class="font-heading" target="_blank" rel="noopener noreferrer">@viktorija.jaksic</a>, sharing creative, plant-based recipes. I help bring her vision to life by crafting digital experiences, filming cinematic videos, and editing content.</p>
+					<p>A vegan cooking brand by <a href="https://www.instagram.com/viktorija.j99/" class="font-heading" target="_blank" rel="noopener noreferrer">@viktorija.jaksic</a>. She cooks, I eat, film and edit, and together we try to convince the internet that vegetables can be exciting. It's working. Mostly.</p>
 				</div>
-				<div class="bg-zinc-100 dark:bg-zinc-900 p-fluid-sm border-2 border-zinc-200 hover:border-blue-500 dark:border-zinc-800 transition-all hover:-translate-y-1 duration-500 ease-in-out">
+				<div class="bg-zinc-100 dark:bg-zinc-900 p-fluid-sm border-2 border-zinc-200 hover:border-woodland-500 dark:border-zinc-800 transition-all hover:-translate-y-1 duration-500 ease-in-out">
 					<h4>This Portfolio:</h4>
-					<p>Since starting my photography journey a few years ago, my work has been featured across social media, newspapers, apps, and more. I decided it was time to create a proper portfolio to showcase my favorite projects and share my vision.</p>
+					<p>I finally decided to make a proper portfolio because people kept asking, “Do you have a website?” and I got tired of saying, “Uh… soon.” So here it is - a digital shrine to my favorite photos and questionable life choices.</p>
 				</div>
 			</div>
 		</div>
-		<div class="bg-zinc-100 dark:bg-zinc-900 p-fluid-sm">
+		<div class="self-start bg-zinc-100 dark:bg-zinc-900 p-fluid-sm w-full lg:w-1/2">
 			<Image
-			src={filipSteficarImage}
+			src="https://fscms.nova.filipsteficar.com/api/files/pbc_1063624087/4walsoye8oi54bs/filip_steficar_art_2_qxdla60upf.webp"
 			alt="Portrait of Filip Štefičar"
 			width="1200"
 			height="800"
 			loading="eager"
-			format="webp"
 			/>
-			<p class="flex flex-row justify-between mt-fluid-sm">Location: <span>Zagreb, Croatia</span></p>
+			<p class="flex flex-row justify-between mt-fluid-sm">"Imma be what I set out to be, without a doubt undoubtedly." - Eminem</p>
 		</div>
 	</div>
 </section>
 <section class="mt-fluid-sm">
 	<div class="mx-auto px-fluid-sm container">
-		<h3>Some Numbers</h3>
+		<h3>Fun Facts</h3>
 		<div class="gap-fluid-sm grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 mt-fluid-sm">
-			<div class="flex flex-col gap-fluid-sm bg-zinc-100 dark:bg-zinc-900 p-fluid-sm border-2 border-zinc-200 hover:border-blue-500 dark:border-zinc-800 transition-all hover:-translate-y-1 duration-500 ease-in-out">
-				<h4 class="leading-none">Unsplash Views</h4>
-				<p>1.000.000+</p>
+			<div class="flex flex-col gap-fluid-sm bg-zinc-100 dark:bg-zinc-900 p-fluid-sm border-2 border-zinc-200 hover:border-woodland-500 dark:border-zinc-800 transition-all hover:-translate-y-1 duration-500 ease-in-out">
+				<h4 class="leading-none">Photos Taken</h4>
+				<p>147.397 (and counting)</p>
 			</div>
 
-			<div class="flex flex-col gap-fluid-sm bg-zinc-100 dark:bg-zinc-900 p-fluid-sm border-2 border-zinc-200 hover:border-blue-500 dark:border-zinc-800 transition-all hover:-translate-y-1 duration-500 ease-in-out">
-				<h4 class="leading-none">Projects Launched</h4>
-				<p>20+</p>
+			<div class="flex flex-col gap-fluid-sm bg-zinc-100 dark:bg-zinc-900 p-fluid-sm border-2 border-zinc-200 hover:border-woodland-500 dark:border-zinc-800 transition-all hover:-translate-y-1 duration-500 ease-in-out">
+				<h4 class="leading-none">Espressos / Day</h4>
+				<p>6 (+/- 2)</p>
 			</div>
 
-			<div class="flex flex-col gap-fluid-sm bg-zinc-100 dark:bg-zinc-900 p-fluid-sm border-2 border-zinc-200 hover:border-blue-500 dark:border-zinc-800 transition-all hover:-translate-y-1 duration-500 ease-in-out">
-				<h4 class="leading-none">Brand Collabs</h4>
-				<p>50+</p>
+			<div class="flex flex-col gap-fluid-sm bg-zinc-100 dark:bg-zinc-900 p-fluid-sm border-2 border-zinc-200 hover:border-woodland-500 dark:border-zinc-800 transition-all hover:-translate-y-1 duration-500 ease-in-out">
+				<h4 class="leading-none">Ideas / Hour</h4>
+				<p>12+</p>
 			</div>
 
-			<div class="flex flex-col gap-fluid-sm bg-zinc-100 dark:bg-zinc-900 p-fluid-sm border-2 border-zinc-200 hover:border-blue-500 dark:border-zinc-800 transition-all hover:-translate-y-1 duration-500 ease-in-out">
-				<h4 class="leading-none">Top 10% of 🌍</h4>
-				<p>3+ Years In Row</p>
+			<div class="flex flex-col gap-fluid-sm bg-zinc-100 dark:bg-zinc-900 p-fluid-sm border-2 border-zinc-200 hover:border-woodland-500 dark:border-zinc-800 transition-all hover:-translate-y-1 duration-500 ease-in-out">
+				<h4 class="leading-none">Sanity Level</h4>
+				<p>-9000</p>
 			</div>
 		</div>
 	</div>

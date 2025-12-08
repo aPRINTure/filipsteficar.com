@@ -1,8 +1,8 @@
 @import "tailwindcss";
 @plugin '@tailwindcss/typography';
 @theme {
-    --font-heading: "Instrument Serif", system-ui, sans-serif;
-    --font-body: "Outfit", system-ui, sans-serif;
+    --font-heading: "Kalam", system-ui, sans-serif;
+    --font-body: "Satoshi", system-ui, sans-serif;
     
     --text-fluid-xs: clamp(0.7813rem, 0.7679rem + 0.0335vw, 0.8rem);
     --text-fluid-sm: clamp(0.9375rem, 0.8929rem + 0.1116vw, 1rem);
@@ -22,6 +22,18 @@
     --spacing-fluid-2xl: clamp(4.5rem, 4.1429rem + 0.8929vw, 5rem);
     --spacing-fluid-3xl: clamp(5.625rem, 5.1786rem + 1.1161vw, 6.25rem);
     --spacing-fluid-4xl: clamp(6.75rem, 6.2143rem + 1.3393vw, 7.5rem);
+
+    --color-woodland-50: oklch(0.9454 0.0251 149.0060);
+    --color-woodland-100: oklch(0.8911 0.0508 148.6630);
+    --color-woodland-200: oklch(0.8346 0.0747 149.4964);
+    --color-woodland-300: oklch(0.7813 0.0992 149.8770);
+    --color-woodland-400: oklch(0.7264 0.1220 149.9538);
+    --color-woodland-500: oklch(0.6716 0.1451 150.1493);
+    --color-woodland-600: oklch(0.5832 0.1219 150.0830);
+    --color-woodland-700: oklch(0.4948 0.0974 149.9413);
+    --color-woodland-800: oklch(0.4050 0.0733 149.6616);
+    --color-woodland-900: oklch(0.3161 0.0501 149.8965);
+    --color-woodland-950: oklch(0.2254 0.0234 149.7339);
 }
 
 @layer base {
@@ -47,7 +59,6 @@
         font-family: var(--font-heading);
         font-weight: var(--font-weight-semibold);
         color: var(--color-neutral-950);
-        font-weight: 400;
 
         @variant dark {
             color: var(--color-neutral-50);
@@ -55,7 +66,7 @@
     }
     body {
         font-family: var(--font-body);
-        font-weight: var(--font-weight-normal);
+        font-weight: var(--font-weight-semibold);
         font-size: var(--text-fluid-base);
         color: var(--color-neutral-800);
 
@@ -72,33 +83,33 @@
     }
 }
 
-/* Outfit */
+/* Satoshi */
 @font-face {
-	font-family: 'Outfit';
-	src:  url('/fonts/Outfit-Variable.woff2') format('woff2'),
-        url('/fonts/Outfit-Variable.woff') format('woff'),
-        url('/fonts/Outfit-Variable.ttf') format('truetype');
-    font-weight: 100 900;
+	font-family: 'Satoshi';
+	src:  url('/fonts/Satoshi-Variable.woff2') format('woff2'),
+        url('/fonts/Satoshi-Variable.woff') format('woff'),
+        url('/fonts/Satoshi-Variable.ttf') format('truetype');
+    font-weight: 300 900;
     font-style: normal;
     font-display: swap;
 }
-/* Instrument Serif */
+/* Satoshi Italic */
 @font-face {
-	font-family: 'Instrument Serif';
-	src:  url('/fonts/InstrumentSerif-Regular.woff2') format('woff2'),
-        url('/fonts/InstrumentSerif-Regular.woff') format('woff'),
-        url('/fonts/InstrumentSerif-Regular.ttf') format('truetype');
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-}
-/* Instrument Serif Italic */
-@font-face {
-	font-family: 'Instrument Serif';
-	src:  url('/fonts/InstrumentSerif-Italic.woff2') format('woff2'),
-        url('/fonts/InstrumentSerif-Italic.woff') format('woff'),
-        url('/fonts/InstrumentSerif-Italic.ttf') format('truetype');
-    font-weight: 400;
+	font-family: 'Satoshi';
+	src:  url('/fonts/Satoshi-VariableItalic.woff2') format('woff2'),
+        url('/fonts/Satoshi-VariableItalic.woff') format('woff'),
+        url('/fonts/Satoshi-VariableItalic.ttf') format('truetype');
+    font-weight: 300 900;
     font-style: italic;
+    font-display: swap;
+}
+/* Kalam */
+@font-face {
+	font-family: 'Kalam';
+	src:  url('/fonts/Kalam-Variable.woff2') format('woff2'),
+        url('/fonts/Kalam-Variable.woff') format('woff'),
+        url('/fonts/Kalam-Variable.ttf') format('truetype');
+    font-weight: 300 700;
+    font-style: normal;
     font-display: swap;
 }
