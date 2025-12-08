@@ -17,18 +17,23 @@ const data = await response.json();
 const photos: PocketBasePhotos[] = data.items;
 ---
 <Layout 
-  pageTitle={`${siteData.name} | Home`}
-  pageDescription="Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque blanditiis modi architecto ipsum. Distinctio, ipsam quis."
+  pageTitle={`${siteData.name} | Where Creativity Lives`}
+  pageDescription="Multi-talented creative entrepreneur that loves photography, coding, music production and more!"
   currentURL={currentURL}
-  ogImage="https://images.unsplash.com/photo-1677242178360-6518e2a87194?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-  ogImageAlt="Og Image Description"
+  ogImage="https://fscms.nova.filipsteficar.com/api/files/pbc_1063624087/c5iyxwk08jcszsd/filip_steficar_art_1_adnbf0tfww.webp"
+  ogImageAlt="Portraif of Filip Štefičar"
   articleAuthor={siteData.author}
 >
 <section>
     <Hero />
 </section>
-<section class="columns-1 md:columns-2 lg:columns-3 mx-auto mt-fluid-sm px-fluid-sm container">
-    {photos.map((photo: PocketBasePhotos) => (
+<section>
+    <div class="mx-auto mt-fluid-sm px-fluid-sm container">
+        <h3>My Gallery</h3>
+        <p class="w-full lg:max-w-1/2">A curated selection of my favorite shots from the past few years. Yes, I took more. No, you may not see the ones where I missed focus.</p>
+    </div>
+    <div class="columns-1 md:columns-2 lg:columns-3 mx-auto mt-fluid-sm px-fluid-sm container">
+        {photos.map((photo: PocketBasePhotos) => (
         <div class="mb-fluid-sm break-inside-avoid">
             <Polaroid
             src={`https://fscms.nova.filipsteficar.com/api/files/photos/${photo.id}/${photo.image}?thumb=0x100`}
@@ -38,6 +43,7 @@ const photos: PocketBasePhotos[] = data.items;
             loading="lazy"
             />
         </div>
-    ))}
+        ))}
+    </div>
 </section>
 </Layout>

@@ -10,6 +10,7 @@ const toolbox: PocketBaseToolbox[] = data.items;
 ---
 <div class="mx-auto px-fluid-sm container">
 	<h3>My Toolbox</h3>
+	<p class="w-full lg:max-w-1/2">Heads up: a few of these are affiliate links. If you grab something, I earn a tiny commission (you pay nothing extra). It helps me keep the lights on - literally.</p>
 	<div class="flex flex-row flex-wrap gap-fluid-sm mt-fluid-sm">
 		{toolbox?.sort((a, b) => a.name.localeCompare(b.name)).map(tool => (
 		<div class="flex flex-col gap-fluid-sm">

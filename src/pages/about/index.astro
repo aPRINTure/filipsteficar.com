@@ -3,15 +3,14 @@
 import Layout from "@/layouts/Layout.astro";
 import { Image } from 'astro:assets';
 import MyToolbox from "@/components/MyToolbox.astro";
-import Featured from "@/components/Featured.astro";
 // Data
 import { siteData } from "@/data/global";
 // Current URL
 const currentURL = Astro.url.href;
 ---
 <Layout 
-	pageTitle={`${siteData.name} | About Me`}
-	pageDescription="Photographer, creator, and entrepreneur who's always building something new."
+	pageTitle={`${siteData.name} | Get To Know Me`}
+	pageDescription="Creative entrepreneur, photographer, designer, and obsessed with creating startups."
 	currentURL={currentURL}
 	ogImage="https://fscms.nova.filipsteficar.com/api/files/pbc_1063624087/4walsoye8oi54bs/filip_steficar_art_2_qxdla60upf.webp"
 	ogImageAlt="Portrait of Filip Štefičar"
@@ -21,19 +20,19 @@ const currentURL = Astro.url.href;
 	<div class="flex lg:flex-row flex-col gap-fluid-sm mx-auto px-fluid-sm container">
 		<div class="w-full lg:w-1/2">
 			<h1 class="leading-tight">Hi, I am Filip Štefičar. Error 404: Sanity Not Found!</h1>
-			<p class="mt-fluid-sm">Photographer, creator, and entrepreneur obsessed with making things. If I'm not building something new, that's when you should really worry.</p>
+			<p class="mt-fluid-sm">Creative entrepreneur, photographer, designer, and obsessed with creating startups. If I'm not building something new, that's when you should really worry.</p>
 			<div class="flex flex-col gap-fluid-sm mt-fluid-sm">
 				<h3>Currently working on:</h3>
-				<div class="bg-zinc-100 dark:bg-zinc-900 p-fluid-sm border-2 border-zinc-200 hover:border-woodland-500 dark:border-zinc-800 transition-all hover:-translate-y-1 duration-500 ease-in-out">
-					<h4>aPRINTure:</h4>
+				<div class="bg-zinc-100 dark:bg-zinc-900 p-fluid-sm border-2 border-zinc-200 dark:border-zinc-800 transition-all hover:-translate-y-1 duration-500 ease-in-out">
+					<h4>aPRINTure</h4>
 					<p>My 3D printing brand for photographers. Success rate: questionable. Vibes: immaculate. We’re making custom lens adapters for vintage lenses because I keep losing mine and refuse to pay €40 every time gravity wins.</p>
 				</div>
-				<div class="bg-zinc-100 dark:bg-zinc-900 p-fluid-sm border-2 border-zinc-200 hover:border-woodland-500 dark:border-zinc-800 transition-all hover:-translate-y-1 duration-500 ease-in-out">
-					<h4>Fun&Grains:</h4>
-					<p>A vegan cooking brand by <a href="https://www.instagram.com/viktorija.j99/" class="font-heading" target="_blank" rel="noopener noreferrer">@viktorija.jaksic</a>. She cooks, I eat, film and edit, and together we try to convince the internet that vegetables can be exciting. It's working. Mostly.</p>
+				<div class="bg-zinc-100 dark:bg-zinc-900 p-fluid-sm border-2 border-zinc-200 dark:border-zinc-800 transition-all hover:-translate-y-1 duration-500 ease-in-out">
+					<h4>Fun&Grains</h4>
+					<p>3D-printing brand for cooking related stuff by <a href="https://www.instagram.com/viktorija.j99/" target="_blank" rel="noopener noreferrer">@viktorija.jaksic</a>. She cooks and does CAD design & printing, while I eat and document the chaos. Together we're trying to convince the internet that her products are amazing.</p>
 				</div>
-				<div class="bg-zinc-100 dark:bg-zinc-900 p-fluid-sm border-2 border-zinc-200 hover:border-woodland-500 dark:border-zinc-800 transition-all hover:-translate-y-1 duration-500 ease-in-out">
-					<h4>This Portfolio:</h4>
+				<div class="bg-zinc-100 dark:bg-zinc-900 p-fluid-sm border-2 border-zinc-200 dark:border-zinc-800 transition-all hover:-translate-y-1 duration-500 ease-in-out">
+					<h4>This Thing Here</h4>
 					<p>I finally decided to make a proper portfolio because people kept asking, “Do you have a website?” and I got tired of saying, “Uh… soon.” So here it is - a digital shrine to my favorite photos and questionable life choices.</p>
 				</div>
 			</div>
@@ -46,7 +45,7 @@ const currentURL = Astro.url.href;
 			height="800"
 			loading="eager"
 			/>
-			<p class="flex flex-row justify-between mt-fluid-sm">"Imma be what I set out to be, without a doubt undoubtedly." - Eminem</p>
+			<p class="mt-fluid-sm font-heading font-semibold">Favorite quote: "Imma be what I set out to be, without a doubt, undoubtedly." - Eminem</p>
 		</div>
 	</div>
 </section>
@@ -54,23 +53,23 @@ const currentURL = Astro.url.href;
 	<div class="mx-auto px-fluid-sm container">
 		<h3>Fun Facts</h3>
 		<div class="gap-fluid-sm grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 mt-fluid-sm">
-			<div class="flex flex-col gap-fluid-sm bg-zinc-100 dark:bg-zinc-900 p-fluid-sm border-2 border-zinc-200 hover:border-woodland-500 dark:border-zinc-800 transition-all hover:-translate-y-1 duration-500 ease-in-out">
-				<h4 class="leading-none">Photos Taken</h4>
+			<div class="flex flex-col gap-fluid-sm bg-zinc-100 dark:bg-zinc-900 p-fluid-sm border-2 border-zinc-200 dark:border-zinc-800 transition-all hover:-translate-y-1 duration-500 ease-in-out">
+				<h3 class="text-fluid-lg leading-tight">Photos Taken</h3>
 				<p>147.397 (and counting)</p>
 			</div>
 
-			<div class="flex flex-col gap-fluid-sm bg-zinc-100 dark:bg-zinc-900 p-fluid-sm border-2 border-zinc-200 hover:border-woodland-500 dark:border-zinc-800 transition-all hover:-translate-y-1 duration-500 ease-in-out">
-				<h4 class="leading-none">Espressos / Day</h4>
+			<div class="flex flex-col gap-fluid-sm bg-zinc-100 dark:bg-zinc-900 p-fluid-sm border-2 border-zinc-200 dark:border-zinc-800 transition-all hover:-translate-y-1 duration-500 ease-in-out">
+				<h3 class="text-fluid-lg leading-tight">Espressos / Day</h3>
 				<p>6 (+/- 2)</p>
 			</div>
 
-			<div class="flex flex-col gap-fluid-sm bg-zinc-100 dark:bg-zinc-900 p-fluid-sm border-2 border-zinc-200 hover:border-woodland-500 dark:border-zinc-800 transition-all hover:-translate-y-1 duration-500 ease-in-out">
-				<h4 class="leading-none">Ideas / Hour</h4>
+			<div class="flex flex-col gap-fluid-sm bg-zinc-100 dark:bg-zinc-900 p-fluid-sm border-2 border-zinc-200 dark:border-zinc-800 transition-all hover:-translate-y-1 duration-500 ease-in-out">
+				<h3 class="text-fluid-lg leading-tight">Ideas / Hour</h3>
 				<p>12+</p>
 			</div>
 
-			<div class="flex flex-col gap-fluid-sm bg-zinc-100 dark:bg-zinc-900 p-fluid-sm border-2 border-zinc-200 hover:border-woodland-500 dark:border-zinc-800 transition-all hover:-translate-y-1 duration-500 ease-in-out">
-				<h4 class="leading-none">Sanity Level</h4>
+			<div class="flex flex-col gap-fluid-sm bg-zinc-100 dark:bg-zinc-900 p-fluid-sm border-2 border-zinc-200 dark:border-zinc-800 transition-all hover:-translate-y-1 duration-500 ease-in-out">
+				<h3 class="text-fluid-lg leading-tight">Sanity Level</h3>
 				<p>-9000</p>
 			</div>
 		</div>
@@ -78,8 +77,5 @@ const currentURL = Astro.url.href;
 </section>
 <section class="mt-fluid-sm">
 	<MyToolbox />
-</section>
-<section class="mt-fluid-sm">
-	<Featured />
 </section>
 </Layout>

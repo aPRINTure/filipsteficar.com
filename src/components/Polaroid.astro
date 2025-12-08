@@ -28,7 +28,7 @@ import "glightbox/dist/css/glightbox.css";
         loading={loading}
         />
     </a>
-    <p class="flex flex-row flex-wrap justify-between gap-fluid-sm mt-fluid-sm font-heading text-fluid-base">{quote}</p>
+    <p class="flex flex-row flex-wrap justify-between gap-fluid-sm mt-fluid-sm font-heading font-semibold text-fluid-base">{quote}</p>
 </div>
 
 <script>
@@ -40,3 +40,10 @@ import "glightbox/dist/css/glightbox.css";
         loop: true
     });
 </script>
+
+<style is:global>
+    #glightbox-slider > .gslide-description.description-bottom {
+        background: red !important;
+        color: red;
+    }
+</style>
