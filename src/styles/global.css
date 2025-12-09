@@ -1,8 +1,9 @@
 @import "tailwindcss";
 @plugin '@tailwindcss/typography';
 @theme {
-    --font-heading: "Kalam", system-ui, sans-serif;
+    --font-heading: "Clash Display", system-ui, sans-serif;
     --font-body: "Satoshi", system-ui, sans-serif;
+    --font-decorative: "Kalam", system-ui, sans-serif;
     
     --text-fluid-xs: clamp(0.7813rem, 0.7679rem + 0.0335vw, 0.8rem);
     --text-fluid-sm: clamp(0.9375rem, 0.8929rem + 0.1116vw, 1rem);
@@ -105,6 +106,16 @@
         url('/fonts/Satoshi-VariableItalic.ttf') format('truetype');
     font-weight: 300 900;
     font-style: italic;
+    font-display: swap;
+}
+/* Clash Display */
+@font-face {
+	font-family: 'Clash Display';
+	src:  url('/fonts/ClashDisplay-Variable.woff2') format('woff2'),
+        url('/fonts/ClashDisplay-Variable.woff') format('woff'),
+        url('/fonts/ClashDisplay-Variable.ttf') format('truetype');
+    font-weight: 200 700;
+    font-style: normal;
     font-display: swap;
 }
 /* Kalam */
