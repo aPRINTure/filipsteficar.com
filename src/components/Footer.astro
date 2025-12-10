@@ -2,8 +2,11 @@
 import { siteData, contactInfo } from "@/data/global";
 ---
 <footer class="bg-zinc-50 dark:bg-zinc-950 mt-auto border-zinc-100 dark:border-zinc-900 border-t-2">
-    <div class="flex flex-row justify-between mx-auto p-fluid-sm text-zinc-700 dark:text-zinc-300 container">
+    <div class="flex flex-row flex-wrap justify-between gap-fluid-sm mx-auto p-fluid-sm text-zinc-700 dark:text-zinc-300 container">
         <p>{siteData.copyright}</p>
-        <a href=`mailto:${contactInfo.email}` class="hover:text-zinc-950 dark:hover:text-zinc-50 hover:underline underline-offset-2">{contactInfo.email}</a>
+        <div class="flex flex-row gap-fluid-sm">
+            <a href=`mailto:${contactInfo.email}` class="hover:text-zinc-950 dark:hover:text-zinc-50 hover:underline underline-offset-2">{contactInfo.email}</a>
+            <button type="button" data-cc="show-preferencesModal" class="font-semibold hover:text-zinc-950 dark:hover:text-zinc-50 hover:underline cursor-pointer">Cookies</button>
+        </div>
     </div>
 </footer>

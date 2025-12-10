@@ -2,7 +2,7 @@
 
 ---
 <!-- Umami -->
-<script defer src="https://umami.nova.filipsteficar.com/script.js" data-website-id="74cb56c5-8e16-4b91-ad54-c3539a6dc23e"></script>
+<script defer type="text/plain" src="https://umami.nova.filipsteficar.com/script.js" data-website-id="74cb56c5-8e16-4b91-ad54-c3539a6dc23e" data-category="analytics"></script>
 <!-- Preload Fonts -->
 <link
     rel="preload"
@@ -22,3 +22,19 @@
 <!-- Turnstile -->
 <link rel="preconnect" href="https://challenges.cloudflare.com">
 <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+
+<script is:inline>
+    // Load Theme BEFORE Page Renders to Prevent Flash
+    const savedTheme = localStorage.getItem('theme');
+    
+    if (savedTheme === 'dark') {
+        document.documentElement.classList.add('dark');
+    } else if (savedTheme === 'light') {
+        document.documentElement.classList.remove('dark');
+    } else {
+        // Only check system preference if no saved theme
+        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.documentElement.classList.add('dark');
+        }
+    }
+</script>

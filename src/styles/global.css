@@ -86,6 +86,7 @@
             color: var(--color-neutral-50);
         }
     }
+
 }
 
 /* Satoshi */
@@ -128,3 +129,5 @@
     font-style: normal;
     font-display: swap;
 }
+/* Dark Mode */
+@custom-variant dark (&:where(.dark, .dark *));
