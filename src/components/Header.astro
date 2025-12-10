@@ -11,9 +11,8 @@ import { mainMenu } from "@/data/global";
             ))}
         </ul>
 
-        <button id="theme-toggle" class="flex flex-row items-center gap-fluid-2xs bg-zinc-100 hover:bg-zinc-200 hover:dark:bg-zinc-800 dark:bg-zinc-900 px-fluid-sm py-fluid-2xs rounded-full transition-colors duration-500 ease-in-out">
+        <button id="theme-toggle" class="flex flex-row justify-center items-center bg-zinc-100 hover:bg-zinc-200 hover:dark:bg-zinc-800 dark:bg-zinc-900 p-fluid-2xs rounded-full w-12 h-12 transition-colors duration-500 ease-in-out">
             <span id="theme-icon">🌙</span>
-            <span id="theme-text" class="font-decorative">Dark</span>
         </button>
     </nav>
 </header>
@@ -21,17 +20,10 @@ import { mainMenu } from "@/data/global";
 <script is:inline>
     function updateThemeButton() {
         const icon = document.getElementById('theme-icon');
-        const text = document.getElementById('theme-text');
         const isDark = document.documentElement.classList.contains('dark');
         
-        if (icon && text) {
-            if (isDark) {
-                icon.textContent = '☀️';
-                text.textContent = 'Light';
-            } else {
-                icon.textContent = '🌙';
-                text.textContent = 'Dark';
-            }
+        if (icon) {
+            icon.textContent = isDark ? '☀️' : '🌙';
         }
     }
 
