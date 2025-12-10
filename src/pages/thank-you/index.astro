@@ -14,5 +14,9 @@ const currentURL = Astro.url.href;
 	ogImageAlt="Og Image Description"
 	articleAuthor={siteData.author}
 >
-Thank You
+<section class="flex flex-col justify-center items-center gap-fluid-sm mx-auto px-fluid-sm min-h-screen text-center container">
+	<h1 class="leading-tight">Thanks! You Did the Thing!</h1>
+	<p class="lg:max-w-1/2">Your submission has been lovingly placed into a digital folder called “Important Stuff.” Yes, it’s real. Yes, it's empty except for you.</p>
+	<a href="/" class="bg-woodland-100 hover:bg-woodland-200 hover:dark:bg-woodland-800 dark:bg-woodland-900 px-fluid-sm py-fluid-2xs rounded-full transition-colors duration-500 ease-in-out">Back to Home</a>
+</section>
 </Layout>
